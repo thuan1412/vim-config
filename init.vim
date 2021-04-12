@@ -60,6 +60,8 @@ else
 endif
 
 Plug 'mbbill/undotree'
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -284,7 +286,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 set number
 
 " fzf
-nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <space>f :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 
 " Tabs have width of 2, use spaces instead of tab characters
@@ -317,8 +319,8 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 " custommmmmmmmmmmmmmmmm
 let g:coc_disable_startup_warning = 1
 set clipboard=unnamedplus " use clipboard for copy and paste
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Left> :bprevious<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-1> :tabnext 1
 nnoremap <C-2> :tabnext 2
@@ -383,7 +385,7 @@ command! -bang -nargs=* GGrep
         \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0):
 
 command! -bang -nargs=? -complete=dir Files
-        \ call fzf#vim#files(<q-args>, {'options': [ '--info=inline',  '--bind', 'alt-a:select-all,alt-d:deselect-all', '--preview', 'cat {}']}, <bang>0)
+        \ call fzf#vim#files(<q-args>, {'options': [ '--info=inline',  '--bind', 'alt-a:select-all,alt-d:deselect-all', '--preview', 'batcat {}']}, <bang>0)
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -471,4 +473,22 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 let g:calendar_google_calender = 1
 let g:calendar_google_task = 1
-source ~/.cache/calendar.vim/credentials.vim
+" source ~/.cache/calendar.vim/credentials.vim
+
+set ignorecase
+set smartcase
+
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
+omap ih <Plug>(GitGutterTextObjectInnerPending)
+omap ah <Plug>(GitGutterTextObjectOuterPending)
+xmap ih <Plug>(GitGutterTextObjectInnerVisual)
+xmap ah <Plug>(GitGutterTextObjectOuterVisual)
