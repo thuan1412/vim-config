@@ -7,8 +7,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'leafgarland/typescript-vim'
+
+" Theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'patstockwell/vim-monokai-tasty'
+Plug 'marko-cerovac/material.nvim'
+
 Plug 'vim-ruby/vim-ruby'
 Plug 'sbdchd/neoformat'
 
@@ -61,6 +65,10 @@ endif
 
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
+
+" https://github.com/romgrk/barbar.nvim
+" Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'romgrk/barbar.nvim'
 
 call plug#end()
 
@@ -288,6 +296,7 @@ set number
 " fzf
 nnoremap <silent> <space>f :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <space>h :History<CR>
 
 " Tabs have width of 2, use spaces instead of tab characters
 set expandtab
@@ -298,7 +307,17 @@ set tabstop=2
 set number relativenumber
 set nu rnu
 
-command! -nargs=0 FF :CocCommand prettier.formatFile
+" command! -nargs=0 FF :CocCommand prettier.formatFile
+command! -nargs=0 FF :call Format()
+function Format()
+  let ext = expand('%:e')
+  if ext == "js" || ext == "json" || ext == "ts" || ext == "tsx" || ext == "jsx" || ext == "html"
+    :CocCommand prettier.formatFile
+  else
+    :CocAction('format')
+  endif
+endfunction
+
 
 " ruby
 let g:ale_linters = {'ruby': ['standardrb']}
@@ -330,7 +349,10 @@ nnoremap <C-a> gg v G $
 " let g:dracula_colorterm = 0
 set termguicolors
 " let g:monokai_colorterm = 0
-colorscheme monokai_pro 
+colorscheme monokai_pro
+" let g:material_style = 'darker'
+
+
 set cursorline
 hi CursorLine term=underline cterm=underline guibg=Grey20
 
@@ -339,12 +361,14 @@ hi CursorLine term=underline cterm=underline guibg=Grey20
 " highlight NonText guibg=none
 nnoremap <ALT-a> yy p
 
+" airline
+let g:airline#extensions#hunks#enabled=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'jsformatter'
 " let g:airline_statusline_ontop = 1
 
 " let g:airline#extensions#tabline#buffer_nr_show = 1
 
-nnoremap <C-h> :History<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim commentary
@@ -355,11 +379,9 @@ autocmd FileType scss setlocal comments=s1:/*,mb:*,ex:*/ commentstring&
 autocmd FileType vue setlocal comments=s1:/*,mb:*,ex:*/ commentstring&
 augroup END
 
-" airline
-let g:airline#extensions#hunks#enabled=1
 
 let g:lightline = {
-\ 'colorscheme': 'monokai_pro',
+\ 'colorscheme': 'metarial',
 \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -492,3 +514,10 @@ omap ih <Plug>(GitGutterTextObjectInnerPending)
 omap ah <Plug>(GitGutterTextObjectOuterPending)
 xmap ih <Plug>(GitGutterTextObjectInnerVisual)
 xmap ah <Plug>(GitGutterTextObjectOuterVisual)
+
+" let bufferline = {}
+" let bufferline.animation = v:true
+" let bufferline.icons = v:true
+" let bufferline.closable = v:true
+" let bufferline.clickable = v:true
+
