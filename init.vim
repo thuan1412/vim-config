@@ -293,6 +293,11 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Show line numbers
 set number
 
+noremap <space><Right> :vertical resize +2<CR>
+noremap <space><Left> :vertical resize -2<CR>
+noremap <space><Up> :resize +2<CR>
+noremap <space><Down> :resize -2<CR>
+
 " fzf
 nnoremap <silent> <space>f :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
@@ -307,16 +312,16 @@ set tabstop=2
 set number relativenumber
 set nu rnu
 
-" command! -nargs=0 FF :CocCommand prettier.formatFile
-command! -nargs=0 FF :call Format()
-function Format()
-  let ext = expand('%:e')
-  if ext == "js" || ext == "json" || ext == "ts" || ext == "tsx" || ext == "jsx" || ext == "html"
-    :CocCommand prettier.formatFile
-  else
-    :CocAction('format')
-  endif
-endfunction
+command! -nargs=0 FF :CocCommand prettier.formatFile
+" command! -nargs=0 FF :call Format()
+" function Format()
+"   let ext = expand('%:e')
+"   if ext == "js" || ext == "json" || ext == "ts" || ext == "tsx" || ext == "jsx" || ext == "html"
+"     :CocCommand prettier.formatFile
+"   else
+"     :CocAction('format')
+"   endif
+" endfunction
 
 
 " ruby
