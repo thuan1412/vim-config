@@ -1,5 +1,6 @@
 set nocompatible
 
+
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'ryanoasis/vim-devicons'
 
@@ -70,6 +71,9 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'romgrk/barbar.nvim'
 
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -526,3 +530,19 @@ xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 " let bufferline.closable = v:true
 " let bufferline.clickable = v:true
 
+" LSP config
+"""""""""""" 
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
+" Python
+lua << EOF
+require 'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+EOF
