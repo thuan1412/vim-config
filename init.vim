@@ -73,6 +73,7 @@ Plug 'jiangmiao/auto-pairs'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
 Plug 'nvim-lua/completion-nvim'
 call plug#end()
 
@@ -185,15 +186,15 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" nmap <silent> [g <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gR <Plug>(coc-rename)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gR <Plug>(coc-rename)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -531,7 +532,8 @@ xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 " let bufferline.clickable = v:true
 
 " LSP config
-"""""""""""" 
+""""""""""" 
+
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -542,7 +544,22 @@ set completeopt=menuone,noinsert,noselect
 
 " Avoid showing message extra message when using completion
 set shortmess+=c
+
+lua << EOF
+-- require'lspinstall'.setup() -- important
+--
+-- local servers = require'lspinstall'.installed_servers()
+-- for _, server in pairs(servers) do
+--   require'lspconfig'[server].setup{on_attach=require'completion'.on_attach}
+-- end
+EOF
+
 " Python
 lua << EOF
 require 'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+require 'lspconfig'.elixirls.setup{
+  on_attach=require'completion'.on_attach;
+  cmd={ '/home/thuando/software/vim-0.5/language-server/elixirls/language_server.sh' };
+}
+--
 EOF
