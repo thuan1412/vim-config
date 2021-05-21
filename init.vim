@@ -1,6 +1,5 @@
 set nocompatible
 
-
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'ryanoasis/vim-devicons'
 
@@ -524,6 +523,7 @@ omap ih <Plug>(GitGutterTextObjectInnerPending)
 omap ah <Plug>(GitGutterTextObjectOuterPending)
 xmap ih <Plug>(GitGutterTextObjectInnerVisual)
 xmap ah <Plug>(GitGutterTextObjectOuterVisual)
+iabbrev sout console.log() <Left><Left>
 
 " let bufferline = {}
 " let bufferline.animation = v:true
@@ -533,7 +533,17 @@ xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 
 " LSP config
 """"""""""" 
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gR <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
+command! -nargs=0 Format :lua vim.lsp.buf.formatting()
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -557,9 +567,13 @@ EOF
 " Python
 lua << EOF
 require 'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+require 'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+require 'lspconfig'.tsserver.setup{
+  on_attach=require'completion'.on_attach;
+  cmd={'typescript-language-server', '--stdio'};
+}
 require 'lspconfig'.elixirls.setup{
   on_attach=require'completion'.on_attach;
   cmd={ '/home/thuando/software/vim-0.5/language-server/elixirls/language_server.sh' };
 }
---
 EOF
