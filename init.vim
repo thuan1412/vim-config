@@ -72,8 +72,12 @@ Plug 'jiangmiao/auto-pairs'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
 Plug 'nvim-lua/completion-nvim'
+Plug 'mattn/vim-lsp-settings'
+Plug 'Shougo/deoplete.nvim'
+Plug 'lighttiger2505/deoplete-vim-lsp'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -124,7 +128,7 @@ let g:coc_global_extensions = [
           
 " set up eslint and prettier
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
+  let g:coc_glbal_extensions += ['coc-prettier']
 endif
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
@@ -555,18 +559,8 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 
-lua << EOF
--- require'lspinstall'.setup() -- important
---
--- local servers = require'lspinstall'.installed_servers()
--- for _, server in pairs(servers) do
---   require'lspconfig'[server].setup{on_attach=require'completion'.on_attach}
--- end
-EOF
-
 " Python
 lua << EOF
-require 'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 require 'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 require 'lspconfig'.tsserver.setup{
   on_attach=require'completion'.on_attach;
@@ -576,4 +570,8 @@ require 'lspconfig'.elixirls.setup{
   on_attach=require'completion'.on_attach;
   cmd={ '/home/thuando/software/vim-0.5/language-server/elixirls/language_server.sh' };
 }
+require 'lspconfig'.solargraph.setup {
+  on_attach=require 'completion'.on_attach;
+  cmd={'solargraph', 'stdio'};
+  }
 EOF
