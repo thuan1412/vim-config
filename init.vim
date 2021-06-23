@@ -520,9 +520,5 @@ omap ah <Plug>(GitGutterTextObjectOuterPending)
 xmap ih <Plug>(GitGutterTextObjectInnerVisual)
 xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 
-" let bufferline = {}
-" let bufferline.animation = v:true
-" let bufferline.icons = v:true
-" let bufferline.closable = v:true
-" let bufferline.clickable = v:true
-
+iabbrev sout console.log()<Left>
+" iabbrev def def(): #<LEFT><LEFT><LEFT><LEFT><LEFT>
