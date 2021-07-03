@@ -1,3 +1,4 @@
+let g:tex_conceal = ''
 set nocompatible
 
 call plug#begin(stdpath('data') . '/plugged')
@@ -70,6 +71,17 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'romgrk/barbar.nvim'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'lervag/vimtex'
+
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -522,3 +534,18 @@ xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 
 iabbrev sout console.log()<Left>
 " iabbrev def def(): #<LEFT><LEFT><LEFT><LEFT><LEFT>
+
+" latex
+" call deoplete#custom#var('omni', 'input_patterns', {
+"       \ 'tex': g:vimtex#re#deoplete
+"       \})
+
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+let g:Imap_FreezeImap=1
+" To prevent conceal in LaTeX files
+let g:tex_conceal = ''
+set conceallevel=0
+hi clear Conceal
+let g:indentLine_fileTypeExclude = ['tex']
+
