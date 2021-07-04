@@ -1,5 +1,5 @@
 require'nvim-web-devicons'.setup({
-	override = {
+    override = {
 	    ["/node_modules/"] = {
 	      icon = "ﭧ",
 	      color = "#cbcb41",
@@ -10,7 +10,7 @@ require'nvim-web-devicons'.setup({
 		  color = "#cbcb41",
 		  name = "JavascriptTest"
 		},
-		["db/"] = {
+		["init.lua"] = {
 		  icon = "ﭧ",
 		  color = "#cbcb41",
 		  name = "JavascriptTest"
@@ -18,6 +18,6 @@ require'nvim-web-devicons'.setup({
 
 
 	},
-	default = true;
+    default = true;
 })
 --    pl-web-devicons

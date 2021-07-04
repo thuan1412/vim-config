@@ -5,13 +5,14 @@ end
 require('global')
 require('settings')
 require('plugins')
+
 require('pl-barbar')
 require('pl-colorizer')
 require('pl-compe')
 require('pl-nvim-comment')
-require('pl-nvim-tree')
-require('pl-telescope')
 require('pl-web-devicons')
+require('pl-telescope')
+require('pl-nvim-tree')
 require('pl-which-key')
 
 --- lsp

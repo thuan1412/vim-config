@@ -41,6 +41,16 @@ return require("packer").startup({
 
 		-- TODO: refactor all of this (for now it works, but yes I know it could be wrapped in a simpler )
 
+		-- explorer
+		use {"kyazdani42/nvim-tree.lua", opt = true}
+        
+		-- icon
+        use {"kyazdani42/nvim-web-devicons"}
+
+        -- Status Line and Bufferline
+        use {"glepnir/galaxyline.nvim"}
+        use {"romgrk/barbar.nvim"}
+
 		-- lsp
 		use {"neovim/nvim-lspconfig"}
 		use {"glepnir/lspsaga.nvim"}
@@ -68,5 +78,20 @@ return require("packer").startup({
 
         -- theme
         use {'dracula/vim', as = 'dracula'}
+
+		-- color
+        use "norcalli/nvim-colorizer.lua"
+
+
+
+		-- comment
+		use {"terrortylor/nvim-comment"}
+
+		-- which-key
+		use {"folke/which-key.nvim"}
+
+		---
+		require_plugin("nvim-tree.lua")
+
 	end
 })
