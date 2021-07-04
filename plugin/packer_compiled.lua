@@ -69,6 +69,14 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/auto-pairs"
+  },
+  ["awesome-vim-colorschemes"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/barbar.nvim"
@@ -76,6 +84,10 @@ _G.packer_plugins = {
   ["compe-look"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/compe-look"
+  },
+  ["doom-one.vim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/doom-one.vim"
   },
   dracula = {
     loaded = true,
@@ -161,6 +173,10 @@ _G.packer_plugins = {
   ["vim-repeat"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-repeat"
+  },
+  ["vim-speeddating"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-speeddating"
   },
   ["vim-unimpaired"] = {
     loaded = true,

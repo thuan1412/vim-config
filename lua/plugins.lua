@@ -50,6 +50,7 @@ return require("packer").startup({
         -- Status Line and Bufferline
         use {"glepnir/galaxyline.nvim"}
         use {"romgrk/barbar.nvim"}
+		use {"romgrk/doom-one.vim"}
 
 		-- lsp
 		use {"neovim/nvim-lspconfig"}
@@ -73,11 +74,17 @@ return require("packer").startup({
         -- tpope -- TODO: replace with lua
         use 'tpope/vim-abolish'
         use 'tpope/vim-repeat'
+		use 'tpope/vim-speeddating'
+		use 'tpope/vim-surround'
         use 'tpope/vim-unimpaired'
         use 'junegunn/vim-easy-align'
 
+		-- auto-pairs
+		use 'jiangmiao/auto-pairs'
+
         -- theme
         use {'dracula/vim', as = 'dracula'}
+		use {'rafi/awesome-vim-colorschemes'}
 
 		-- color
         use "norcalli/nvim-colorizer.lua"
@@ -92,6 +99,7 @@ return require("packer").startup({
 
 		---
 		require_plugin("nvim-tree.lua")
+		require_plugin("tpope/vim-abolish")
 
 	end
 })
