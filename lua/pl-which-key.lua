@@ -72,6 +72,14 @@ vim.api.nvim_set_keymap("n", "<leader>W", ":noa update<CR>", {noremap = true, si
 vim.api.nvim_set_keymap("n", "<leader>W", ":noa update<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>4", ":lua require('replacer').run()<cr>", {silent = true})
 
+-- git
+
+vim.api.nvim_set_keymap('n', ']h', ':lua require\'gitsigns\'.next_hunk()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '[h', ':lua require\'gitsigns\'.prev_hunk()<CR>', {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('v', ']h', ':lua require\'gitsigns\'.next_hunk()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '[h', ':lua require\'gitsigns\'.next_hunk()<CR>', {noremap = true, silent = true})
+
 -- TODO create entire treesitter section
 
 local mappings = {

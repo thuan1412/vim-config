@@ -30,3 +30,7 @@ O.auto_complete = true
 O.colorscheme = "dracula"
 O.auto_close_tree = 0
 O.wrap_lines = false
+
+cmd('let g:lsp_log_verbose = 1')
+cmd('let g:lsp_log_file = expand(\'~/vim-lsp.log\')')
+cmd('let g:asyncomplete_log_file = expand(\'~/asyncomplete.log\')')

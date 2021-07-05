@@ -57,6 +57,8 @@ return require("packer").startup({
 		use {"glepnir/lspsaga.nvim"}
 		use {"kabouzeid/nvim-lspinstall"}
 		use {"nvim-lua/lsp-status.nvim"}
+		use {"RishabhRD/popfix"}
+		use {"RishabhRD/nvim-lsputils"}
 
 		-- Telescope
 		use {"nvim-lua/popup.nvim"}
@@ -97,9 +99,16 @@ return require("packer").startup({
 		-- which-key
 		use {"folke/which-key.nvim"}
 
-		---
+        -- Git
+        use {"lewis6991/gitsigns.nvim"}
+        use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
+        use 'f-person/git-blame.nvim'
+
+        -- git diff view
+        use 'sindrets/diffview.nvim'
+
+		--
 		require_plugin("nvim-tree.lua")
 		require_plugin("tpope/vim-abolish")
-
 	end
 })
