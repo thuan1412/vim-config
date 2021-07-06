@@ -129,6 +129,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
+  neoformat = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/neoformat"
+  },
   neogit = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/neogit"
@@ -213,10 +217,6 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-vsnip"
-  },
-  ["vimage.nvim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vimage.nvim"
   },
   ["which-key.nvim"] = {
     loaded = true,

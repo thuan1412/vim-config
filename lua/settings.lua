@@ -14,9 +14,14 @@ o.updatetime = 250 -- Faster completion
 o.timeoutlen = 500 -- By default timeoutlen is 1000 ms
 o.ignorecase = true
 o.smartcase = true
-
-cmd('set ts=4') -- Insert 2 spaces for a tab
-cmd('set sw=4') -- Change the number of space characters inserted for indentation
+o.expandtab = true
+o.smarttab = true
+o.tabstop = 2
+o.shiftwidth=2
+o.softtabstop=2
+o.tabstop=2
+-- cmd('set ts=4') -- Insert 2 spaces for a tab
+-- cmd('set sw=4') -- Change the number of space characters inserted for indentation
 
 cmd('let fg_target = \'green\'')
 
@@ -34,3 +39,19 @@ O.wrap_lines = false
 cmd('let g:lsp_log_verbose = 1')
 cmd('let g:lsp_log_file = expand(\'~/vim-lsp.log\')')
 cmd('let g:asyncomplete_log_file = expand(\'~/asyncomplete.log\')')
+
+-- auto run commands
+local javascript_autoformat = {'BufWritePre', '*.js', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
+local javascriptreact_autoformat = {'BufWritePre', '*.jsx', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
+local typescript_autoformat = {'BufWritePre', '*.ts', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
+local typescriptreact_autoformat = {'BufWritePre', '*.tsx', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
+
+local auto_formatters = {}
+if O.tsserver.autoformat then
+    table.insert(auto_formatters, javascript_autoformat)
+    table.insert(auto_formatters, javascriptreact_autoformat)
+    table.insert(auto_formatters, typescript_autoformat)
+    table.insert(auto_formatters, typescriptreact_autoformat)
+end
+
+cmd('autocmd Filetype typescriptreact setlocal tabstop=2')

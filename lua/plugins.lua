@@ -43,7 +43,7 @@ return require("packer").startup({
 
 		-- explorer
 		use {"kyazdani42/nvim-tree.lua", opt = true}
-        
+
 		-- icon
         use {"kyazdani42/nvim-web-devicons"}
 
@@ -84,14 +84,20 @@ return require("packer").startup({
 		-- auto-pairs
 		use 'jiangmiao/auto-pairs'
 
-        -- theme
-        use {'dracula/vim', as = 'dracula'}
+      -- theme
+      use {'dracula/vim', as = 'dracula'}
 		use {'rafi/awesome-vim-colorschemes'}
+
+		-- code format
+		use {'sbdchd/neoformat'}
 
 		-- color
         use "norcalli/nvim-colorizer.lua"
 
+		-- react
 
+    -- prisma
+    use "pantharshit00/vim-prisma"
 
 		-- comment
 		use {"terrortylor/nvim-comment"}
@@ -99,13 +105,13 @@ return require("packer").startup({
 		-- which-key
 		use {"folke/which-key.nvim"}
 
-        -- Git
-        use {"lewis6991/gitsigns.nvim"}
-        use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
-        use 'f-person/git-blame.nvim'
+    -- Git
+    use {"lewis6991/gitsigns.nvim"}
+    use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
+    use 'f-person/git-blame.nvim'
 
-        -- git diff view
-        use 'sindrets/diffview.nvim'
+    -- git diff view
+    use 'sindrets/diffview.nvim'
 
 		--
 		require_plugin("nvim-tree.lua")
