@@ -65,27 +65,30 @@ return require("packer").startup({
 		use {"nvim-lua/plenary.nvim"}
 		use {"nvim-telescope/telescope.nvim"}
 
-        -- Autocomplete
-        use {"hrsh7th/nvim-compe"}
-        use 'Gavinok/compe-look'
-        use {"rafamadriz/friendly-snippets"}
-        use {"hrsh7th/vim-vsnip"}
-        use {'onsails/lspkind-nvim'}
-        use {"ray-x/lsp_signature.nvim"}
+    -- Autocomplete
+    use {"hrsh7th/nvim-compe"}
+    use 'Gavinok/compe-look'
+    use {"rafamadriz/friendly-snippets"}
+    use {"hrsh7th/vim-vsnip"}
+    use {'onsails/lspkind-nvim'}
+    use {"ray-x/lsp_signature.nvim"}
 
-        -- tpope -- TODO: replace with lua
-        use 'tpope/vim-abolish'
-        use 'tpope/vim-repeat'
+    use {'nvim-lua/completion-nvim'}
+    use {"steelsojka/completion-buffers"}
+
+    -- tpope -- TODO: replace with lua
+    use 'tpope/vim-abolish'
+    use 'tpope/vim-repeat'
 		use 'tpope/vim-speeddating'
 		use 'tpope/vim-surround'
-        use 'tpope/vim-unimpaired'
-        use 'junegunn/vim-easy-align'
+    use 'tpope/vim-unimpaired'
+    use 'junegunn/vim-easy-align'
 
 		-- auto-pairs
 		use 'jiangmiao/auto-pairs'
 
-      -- theme
-      use {'dracula/vim', as = 'dracula'}
+    -- theme
+    use {'dracula/vim', as = 'dracula'}
 		use {'rafi/awesome-vim-colorschemes'}
 
 		-- code format

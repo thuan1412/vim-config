@@ -17,6 +17,8 @@ require('pl-telescope')
 require('pl-nvim-tree')
 require('pl-which-key')
 
+-- require('plug/completion-vim')
+
 --- lsp
 require('lsp')
 require('lsp.ruby-ls')

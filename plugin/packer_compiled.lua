@@ -85,6 +85,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/compe-look"
   },
+  ["completion-buffers"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/completion-buffers"
+  },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/diffview.nvim"
@@ -197,6 +201,10 @@ _G.packer_plugins = {
   ["vim-easy-align"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-easy-align"
+  },
+  ["vim-prisma"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-prisma"
   },
   ["vim-repeat"] = {
     loaded = true,
