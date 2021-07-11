@@ -89,6 +89,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/completion-buffers"
   },
+  ["completion-nvim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/completion-nvim"
+  },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/diffview.nvim"

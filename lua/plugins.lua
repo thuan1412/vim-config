@@ -116,6 +116,10 @@ return require("packer").startup({
     -- git diff view
     use 'sindrets/diffview.nvim'
 
+    -- debug lua
+    use 'jbyuki/one-small-step-for-vimkind'
+    use 'mfussenegger/nvim-dap'
+
 		--
 		require_plugin("nvim-tree.lua")
 		require_plugin("tpope/vim-abolish")
