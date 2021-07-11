@@ -120,6 +120,9 @@ return require("packer").startup({
     use 'jbyuki/one-small-step-for-vimkind'
     use 'mfussenegger/nvim-dap'
 
+    -- hightlight line indent
+    use "lukas-reineke/indent-blankline.nvim"
+
 		--
 		require_plugin("nvim-tree.lua")
 		require_plugin("tpope/vim-abolish")

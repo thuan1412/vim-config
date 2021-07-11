@@ -20,6 +20,8 @@ o.tabstop = 2
 o.shiftwidth=2
 o.softtabstop=2
 o.tabstop=2
+o.currentline=true
+
 -- cmd('set ts=4') -- Insert 2 spaces for a tab
 -- cmd('set sw=4') -- Change the number of space characters inserted for indentation
 

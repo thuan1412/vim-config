@@ -16,6 +16,7 @@ require('pl-web-devicons')
 require('pl-telescope')
 require('pl-nvim-tree')
 require('pl-which-key')
+require('plugs.indent-blankline')
 
 -- require('plug/completion-vim')
 
