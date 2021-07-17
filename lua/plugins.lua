@@ -44,12 +44,20 @@ return require("packer").startup({
 		-- explorer
 		use {"kyazdani42/nvim-tree.lua", opt = true}
 
-		-- icon
-        use {"kyazdani42/nvim-web-devicons"}
+    -- Treesitte
+    use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
+    use 'nvim-treesitter/nvim-treesitter-refactor'
+    use {'nvim-treesitter/playground'} -- playground
+    use {"windwp/nvim-ts-autotag"} -- ts auto tag
+    use 'JoosepAlviste/nvim-ts-context-commentstring' -- ts comment string
 
-        -- Status Line and Bufferline
-        use {"glepnir/galaxyline.nvim"}
-        use {"romgrk/barbar.nvim"}
+		-- icon
+    use {"kyazdani42/nvim-web-devicons"}
+
+    -- Status Line and Bufferline
+    use {"glepnir/galaxyline.nvim"}
+    use {"romgrk/barbar.nvim"}
 		use {"romgrk/doom-one.vim"}
 
 		-- lsp
@@ -90,6 +98,7 @@ return require("packer").startup({
     -- theme
     use {'dracula/vim', as = 'dracula'}
 		use {'rafi/awesome-vim-colorschemes'}
+    use 'folke/tokyonight.nvim'
 
 		-- code format
 		use {'sbdchd/neoformat'}

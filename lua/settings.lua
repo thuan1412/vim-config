@@ -20,7 +20,7 @@ o.tabstop = 2
 o.shiftwidth=2
 o.softtabstop=2
 o.tabstop=2
-o.currentline=true
+wo.cursorline = true -- Enable highlighting of the current line
 
 -- cmd('set ts=4') -- Insert 2 spaces for a tab
 -- cmd('set sw=4') -- Change the number of space characters inserted for indentation
@@ -30,11 +30,12 @@ cmd('let fg_target = \'green\'')
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.cmd[[colorscheme doom-one]]
 
 -- Global settings
+vim.g.tokyonight_style = "storm"
+vim.cmd[[colorscheme tokyonight]]
 O.auto_complete = true
-O.colorscheme = "dracula"
+O.colorscheme = "tokyonight"
 O.auto_close_tree = 0
 O.wrap_lines = false
 

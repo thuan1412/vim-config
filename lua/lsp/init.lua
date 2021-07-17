@@ -1,3 +1,5 @@
+local cmd = vim.cmd
+
 -- TODO figure out why this don't work
 vim.fn.sign_define("LspDiagnosticsSignError",
                    {texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError"})
@@ -38,3 +40,7 @@ vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").
 
 -- Set Default Prefix.
 -- Note: You can set a prefix per lsp server in the lv-globals.lua file
+
+-- Setting for LSP
+cmd("let g:lsp_diagnostics_float_cursor = 1")
+cmd("let g:lsp_diagnostics_float_delay = 500")
