@@ -132,6 +132,8 @@ return require("packer").startup({
     -- hightlight line indent
     use "lukas-reineke/indent-blankline.nvim"
 
+    -- spell checker
+    use "kamykn/spelunker.vim"
 		--
 		require_plugin("nvim-tree.lua")
 		require_plugin("tpope/vim-abolish")

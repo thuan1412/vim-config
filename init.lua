@@ -26,4 +26,5 @@ require('lsp.ruby-ls')
 require('lsp.js-ts-ls')
 require('lsp.lua-ls')
 require('lsp.go-ls')
+require('lsp.python-ls')
 
