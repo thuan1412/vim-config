@@ -33,7 +33,7 @@ vim.opt.relativenumber = true
 
 -- Global settings
 vim.g.tokyonight_style = "storm"
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme space-vim-dark]]
 O.auto_complete = true
 O.colorscheme = "tokyonight"
 O.auto_close_tree = 0
@@ -42,6 +42,7 @@ O.wrap_lines = false
 cmd('let g:lsp_log_verbose = 1')
 cmd('let g:lsp_log_file = expand(\'~/vim-lsp.log\')')
 cmd('let g:asyncomplete_log_file = expand(\'~/asyncomplete.log\')')
+cmd('set synmaxcol=2048')
 
 -- auto run commands
 local javascript_autoformat = {'BufWritePre', '*.js', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
@@ -58,3 +59,5 @@ if O.tsserver.autoformat then
 end
 
 cmd('autocmd Filetype typescriptreact setlocal tabstop=2')
+cmd("au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'")
+cmd("au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'")

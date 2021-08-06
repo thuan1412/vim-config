@@ -230,6 +230,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["spelunker.vim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/spelunker.vim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/telescope.nvim"

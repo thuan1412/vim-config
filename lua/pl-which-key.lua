@@ -84,6 +84,11 @@ vim.api.nvim_set_keymap('v', '[h', ':lua require\'gitsigns\'.next_hunk()<CR>', {
 vim.api.nvim_set_keymap('v', '<F3>', ':lua vim.lsp.buf.formatting_sync(nill, 1000)', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<F3>', ':lua vim.lsp.buf.formatting_sync(nill, 1000)', {noremap = true, silent = true})
 
+vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +2<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -2<cr>', {noremap = true, silent = true})
+
 
 -- TODO create entire treesitter section
 

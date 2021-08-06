@@ -87,18 +87,19 @@ return require("packer").startup({
     -- tpope -- TODO: replace with lua
     use 'tpope/vim-abolish'
     use 'tpope/vim-repeat'
-		use 'tpope/vim-speeddating'
-		use 'tpope/vim-surround'
+    use 'tpope/vim-speeddating'
+    use 'tpope/vim-surround'
     use 'tpope/vim-unimpaired'
     use 'junegunn/vim-easy-align'
 
-		-- auto-pairs
-		use 'jiangmiao/auto-pairs'
+    -- auto-pairs
+    use 'jiangmiao/auto-pairs'
 
     -- theme
     use {'dracula/vim', as = 'dracula'}
 		use {'rafi/awesome-vim-colorschemes'}
     use 'folke/tokyonight.nvim'
+    use 'liuchengxu/space-vim-dark'
 
 		-- code format
 		use {'sbdchd/neoformat'}
@@ -132,9 +133,12 @@ return require("packer").startup({
     -- hightlight line indent
     use "lukas-reineke/indent-blankline.nvim"
 
+    -- outline
+    use "simrat39/symbols-outline.nvim"
+
     -- spell checker
     use "kamykn/spelunker.vim"
-		--
+
 		require_plugin("nvim-tree.lua")
 		require_plugin("tpope/vim-abolish")
 	end
