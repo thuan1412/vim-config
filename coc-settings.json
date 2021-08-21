@@ -1,0 +1,5 @@
+{
+  "solargraph.commandPath": "/usr/local/bin/solargraph",
+  "coc.source.dictionary.priority": 0,
+  "suggest.maxCompleteItemCount": 15
+}

@@ -52,6 +52,10 @@ return require("packer").startup({
     use {"windwp/nvim-ts-autotag"} -- ts auto tag
     use 'JoosepAlviste/nvim-ts-context-commentstring' -- ts comment string
 
+    -- Coc
+    use {'neoclide/coc.nvim', branch = 'release'}
+    use { 'rodrigore/coc-tailwind-intellisense' }
+
 		-- icon
     use {"kyazdani42/nvim-web-devicons"}
 
@@ -61,28 +65,24 @@ return require("packer").startup({
 		use {"romgrk/doom-one.vim"}
 
 		-- lsp
-		use {"neovim/nvim-lspconfig"}
-		use {"glepnir/lspsaga.nvim"}
-		use {"kabouzeid/nvim-lspinstall"}
-		use {"nvim-lua/lsp-status.nvim"}
-		use {"RishabhRD/popfix"}
-		use {"RishabhRD/nvim-lsputils"}
+		-- use {"neovim/nvim-lspconfig"}
+		-- use {"glepnir/lspsaga.nvim"}
+		-- use {"kabouzeid/nvim-lspinstall"}
+		-- use {"nvim-lua/lsp-status.nvim"}
+		-- use {"RishabhRD/popfix"}
+		-- use {"RishabhRD/nvim-lsputils"}
 
 		-- Telescope
 		use {"nvim-lua/popup.nvim"}
 		use {"nvim-lua/plenary.nvim"}
 		use {"nvim-telescope/telescope.nvim"}
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     -- Autocomplete
-    use {"hrsh7th/nvim-compe"}
-    use 'Gavinok/compe-look'
-    use {"rafamadriz/friendly-snippets"}
-    use {"hrsh7th/vim-vsnip"}
-    use {'onsails/lspkind-nvim'}
-    use {"ray-x/lsp_signature.nvim"}
-
-    use {'nvim-lua/completion-nvim'}
-    use {"steelsojka/completion-buffers"}
+    use {'Shougo/deoplete.nvim'}
+    use {'Shougo/neosnippet.vim'}
+    use {'Shougo/neosnippet-snippets'}
+    use {'honza/vim-snippets'}
 
     -- tpope -- TODO: replace with lua
     use 'tpope/vim-abolish'
@@ -105,7 +105,7 @@ return require("packer").startup({
 		use {'sbdchd/neoformat'}
 
 		-- color
-        use "norcalli/nvim-colorizer.lua"
+    use "norcalli/nvim-colorizer.lua"
 
 		-- react
 

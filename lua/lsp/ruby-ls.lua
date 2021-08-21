@@ -2,7 +2,7 @@
 require'lspconfig'.tsserver.setup{}
 
 require'lspconfig'.solargraph.setup {
-    cmd = {"solargraph", "stdio"},
+    cmd = {"/usr/local/bin/solargraph", "stdio"},
 	flags = {
 		debounce_text_changes = 150,
 	}

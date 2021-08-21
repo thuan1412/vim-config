@@ -67,7 +67,7 @@ vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, sil
 
 -- close buffer
 -- vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>w", ":update<CR>", {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("n", "<leader>w", ":update<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>W", ":noa update<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>W", ":noa update<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>4", ":lua require('replacer').run()<cr>", {silent = true})
@@ -90,10 +90,12 @@ vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<cr>', {noremap = 
 vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -2<cr>', {noremap = true, silent = true})
 
 
+
 -- TODO create entire treesitter section
 
 local mappings = {
-    a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+    -- a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+    a = {"<cmd>CocAction<cr>", "Code Action"},
     u = {"<cmd>UndotreeToggle<cr>", "Undo tree"},
 
     ["/"] = "Comment",
