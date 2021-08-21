@@ -78,6 +78,9 @@ return require("packer").startup({
 		use {"nvim-telescope/telescope.nvim"}
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+    -- fzf
+    use { 'junegunn/fzf' }
+
     -- Autocomplete
     use {'Shougo/deoplete.nvim'}
     use {'Shougo/neosnippet.vim'}
@@ -134,7 +137,7 @@ return require("packer").startup({
     use "lukas-reineke/indent-blankline.nvim"
 
     -- outline
-    use "simrat39/symbols-outline.nvim"
+    use "liuchengxu/vista.vim"
 
     -- spell checker
     use "kamykn/spelunker.vim"
