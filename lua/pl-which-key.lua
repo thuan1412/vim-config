@@ -97,6 +97,7 @@ local mappings = {
     -- a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
     a = {"<cmd>CocAction<cr>", "Code Action"},
     u = {"<cmd>UndotreeToggle<cr>", "Undo tree"},
+    i = {"<cmd>Neoformat<cr>", "Format code"},
 
     ["/"] = "Comment",
     ["c"] = {"<cmd>Telescope commands<cr>", "Command"},
@@ -125,7 +126,8 @@ local mappings = {
     b = {
         name = "+Buffers",
         p = {"<cmd>BufferPick<cr>", "Buffer Pick"},
-        o = {"<cmd>BufferCloseAllButCurrent<cr>", "Buffer Only"},
+        o = {"<cmd>Telescope buffers<cr>", "Buffer Only"},
+        c = {"<cmd>BufferClose<cr>", "Close current buffer"},
         D = {"<cmd>BufferOrderByDirectory<cr>", "sort BufferLines automatically by directory"},
         L = {"<cmd>BufferOrderByLanguage<cr>", "sort BufferLines automatically by language"}
     },

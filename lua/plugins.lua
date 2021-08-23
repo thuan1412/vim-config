@@ -80,6 +80,8 @@ return require("packer").startup({
 
     -- fzf
     use { 'junegunn/fzf' }
+    use { 'junegunn/fzf.vim' }
+    use { 'antoinemadec/coc-fzf' }
 
     -- Autocomplete
     use {'Shougo/deoplete.nvim'}

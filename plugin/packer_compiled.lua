@@ -81,6 +81,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["coc-fzf"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/coc-fzf"
+  },
   ["coc-tailwind-intellisense"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/coc-tailwind-intellisense"
@@ -104,6 +108,18 @@ _G.packer_plugins = {
   dracula = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/dracula"
+  },
+  fzf = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf"
+  },
+  ["fzf-preview.vim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf-preview.vim"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,

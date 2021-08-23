@@ -23,6 +23,7 @@ require('pl-symbols-outline')
 require('plugs.indent-blankline')
 require('pl-coc')
 require('pl-vista')
+require('pl-fzf')
 
 -- require('plug/completion-vim')
 
