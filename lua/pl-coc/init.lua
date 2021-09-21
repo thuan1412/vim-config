@@ -44,6 +44,7 @@ g.coc_global_extensions = {
    'coc-prettier',
    'coc-project',
    'coc-pyright',
+   'coc-pyls',
    'coc-react-refactor',
    'coc-rls',
    'coc-sh',
@@ -64,6 +65,7 @@ g.coc_global_extensions = {
    'coc-yaml',
    'coc-yank',
    'coc-lists',
+   'coc-db'
     -- 'coc-rust-analyzer'
 }
 

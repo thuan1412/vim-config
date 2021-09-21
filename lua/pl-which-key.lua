@@ -98,6 +98,7 @@ local mappings = {
     a = {"<cmd>CocAction<cr>", "Code Action"},
     u = {"<cmd>UndotreeToggle<cr>", "Undo tree"},
     i = {"<cmd>Neoformat<cr>", "Format code"},
+    m = {"<cmd>Telescope marks<cr>", "Show marks"},
 
     ["/"] = "Comment",
     ["c"] = {"<cmd>Telescope commands<cr>", "Command"},

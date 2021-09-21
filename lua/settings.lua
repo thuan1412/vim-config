@@ -33,10 +33,7 @@ vim.opt.relativenumber = true
 
 
 -- Global settings
-vim.g.tokyonight_style = "storm"
-vim.cmd[[colorscheme space-vim-dark]]
 O.auto_complete = true
-O.colorscheme = "tokyonight"
 O.auto_close_tree = 0
 O.wrap_lines = false
 

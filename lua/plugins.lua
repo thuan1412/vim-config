@@ -95,6 +95,9 @@ return require("packer").startup({
     use 'tpope/vim-speeddating'
     use 'tpope/vim-surround'
     use 'tpope/vim-unimpaired'
+    use 'tpope/vim-dadbod'
+    use 'kristijanhusak/vim-dadbod-completion'
+    use 'kristijanhusak/vim-dadbod-ui'
     use 'junegunn/vim-easy-align'
 
     -- auto-pairs
@@ -105,6 +108,8 @@ return require("packer").startup({
 		use {'rafi/awesome-vim-colorschemes'}
     use 'folke/tokyonight.nvim'
     use 'liuchengxu/space-vim-dark'
+    use { 'phanviet/vim-monokai-pro' }
+    use 'projekt0n/github-nvim-theme'
 
 		-- code format
 		use {'sbdchd/neoformat'}
@@ -144,6 +149,8 @@ return require("packer").startup({
     -- spell checker
     use "kamykn/spelunker.vim"
 
+    -- marks
+    use { 'kshenoy/vim-signature' }
 		require_plugin("nvim-tree.lua")
 		require_plugin("tpope/vim-abolish")
 	end

@@ -122,6 +122,5 @@ function! s:hi(name, ...)
    end
 endfunc
 
-colorscheme dracula
 call bufferline#highlight#setup()
 

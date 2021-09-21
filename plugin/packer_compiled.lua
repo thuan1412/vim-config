@@ -113,10 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf"
   },
-  ["fzf-preview.vim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf-preview.vim"
-  },
   ["fzf.vim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf.vim"
@@ -238,9 +234,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-abolish"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-dadbod"
+  },
+  ["vim-dadbod-completion"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-dadbod-completion"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui"
+  },
   ["vim-easy-align"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-easy-align"
+  },
+  ["vim-monokai-pro"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-monokai-pro"
   },
   ["vim-prisma"] = {
     loaded = true,
@@ -249,6 +261,10 @@ _G.packer_plugins = {
   ["vim-repeat"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-repeat"
+  },
+  ["vim-signature"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-signature"
   },
   ["vim-snippets"] = {
     loaded = true,

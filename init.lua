@@ -24,6 +24,7 @@ require('plugs.indent-blankline')
 require('pl-coc')
 require('pl-vista')
 require('pl-fzf')
+require('pl-themes')
 
 -- require('plug/completion-vim')
 
@@ -49,3 +50,4 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+vim.cmd("autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni")
