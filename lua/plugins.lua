@@ -42,12 +42,21 @@ return require("packer").startup({
 		-- TODO: refactor all of this (for now it works, but yes I know it could be wrapped in a simpler )
 
 		-- explorer
-		use {"kyazdani42/nvim-tree.lua", opt = true}
+		use {
+      "kyazdani42/nvim-tree.lua", opt = true,
+      requires = 'kyazdani42/nvim-web-devicons',
+    }
 
     -- Treesitte
-    use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
-    use 'nvim-treesitter/nvim-treesitter-refactor'
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
+      -- setup = function()
+      --    require("utils").packer_lazy_load "nvim-treesitter.nvim"
+      -- end,
+    }
+    -- use 'nvim-treesitter/nvim-treesitter-textobjects'
+    -- use 'nvim-treesitter/nvim-treesitter-refactor'
     use {'nvim-treesitter/playground'} -- playground
     use {"windwp/nvim-ts-autotag"} -- ts auto tag
     use 'JoosepAlviste/nvim-ts-context-commentstring' -- ts comment string
@@ -62,7 +71,6 @@ return require("packer").startup({
     -- Status Line and Bufferline
     use {"glepnir/galaxyline.nvim"}
     use {"romgrk/barbar.nvim"}
-		use {"romgrk/doom-one.vim"}
 
 		-- lsp
 		-- use {"neovim/nvim-lspconfig"}
@@ -129,7 +137,9 @@ return require("packer").startup({
 		use {"folke/which-key.nvim"}
 
     -- Git
-    use {"lewis6991/gitsigns.nvim"}
+    use {
+      "lewis6991/gitsigns.nvim",
+    }
     use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
     use 'f-person/git-blame.nvim'
 
@@ -149,8 +159,14 @@ return require("packer").startup({
     -- spell checker
     use "kamykn/spelunker.vim"
 
+    use 'RishabhRD/popfix'
+    use 'RishabhRD/nvim-cheat.sh'
     -- marks
     use { 'kshenoy/vim-signature' }
+
+    -- go
+    -- use { 'fatih/vim-go' }
+
 		require_plugin("nvim-tree.lua")
 		require_plugin("tpope/vim-abolish")
 	end

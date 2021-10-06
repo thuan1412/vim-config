@@ -52,7 +52,7 @@ local opts = {
 vim.g.mapleader = ' '
 
 -- explorer
-vim.api.nvim_set_keymap('n', '<space>e', ':lua require"pl-nvim-tree".toggle_tree()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<space>e', ':NvimTreeToggle<CR>', {noremap = true})
 -- telescope
 vim.api.nvim_set_keymap('n', '<space>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>o', ':Telescope buffers<CR>', {noremap = true, silent = true})

@@ -101,10 +101,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/diffview.nvim"
   },
-  ["doom-one.vim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/doom-one.vim"
-  },
   dracula = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/dracula"
@@ -124,6 +120,10 @@ _G.packer_plugins = {
   ["git-blame.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/git-blame.nvim"
+  },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -149,6 +149,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/neosnippet.vim"
   },
+  ["nvim-cheat.sh"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-cheat.sh"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
@@ -169,14 +173,6 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-treesitter-refactor"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
-  },
-  ["nvim-treesitter-textobjects"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
@@ -205,6 +201,10 @@ _G.packer_plugins = {
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  popfix = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/popfix"
   },
   ["popup.nvim"] = {
     loaded = true,
