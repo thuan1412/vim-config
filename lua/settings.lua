@@ -1,6 +1,7 @@
 local cmd = vim.cmd
 local fn = vim.fn
 local api = vim.api
+local map = api.nvim_set_keymap
 
 local g = vim.g
 local o, wo, bo = vim.o, vim.wo, vim.bo
@@ -32,10 +33,7 @@ vim.opt.relativenumber = true
 
 
 -- Global settings
-vim.g.tokyonight_style = "storm"
-vim.cmd[[colorscheme space-vim-dark]]
 O.auto_complete = true
-O.colorscheme = "tokyonight"
 O.auto_close_tree = 0
 O.wrap_lines = false
 
@@ -61,3 +59,13 @@ end
 cmd('autocmd Filetype typescriptreact setlocal tabstop=2')
 cmd("au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'")
 cmd("au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'")
+
+-- URL handling
+local silentOpts = { noremap = true, silent = true }
+if vim.fn.has("mac") == 1 then
+  map('n', 'gx', ':call jobstart(["open", expand("<cfile>")], {"detach": v:true})<CR>', silentOpts)
+elseif vim.fn.has("unix") == 1 then
+  map('n', 'gx', ':call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>', silentOpts)
+else
+  map('n', 'gx', ':lua print("Error: gx is not supported on this OS!")<CR>', silentOpts)
+end

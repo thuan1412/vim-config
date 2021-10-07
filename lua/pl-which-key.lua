@@ -52,7 +52,7 @@ local opts = {
 vim.g.mapleader = ' '
 
 -- explorer
-vim.api.nvim_set_keymap('n', '<space>e', ':lua require"pl-nvim-tree".toggle_tree()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<space>e', ':NvimTreeToggle<CR>', {noremap = true})
 -- telescope
 vim.api.nvim_set_keymap('n', '<space>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>o', ':Telescope buffers<CR>', {noremap = true, silent = true})
@@ -67,7 +67,7 @@ vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, sil
 
 -- close buffer
 -- vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>w", ":update<CR>", {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("n", "<leader>w", ":update<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>W", ":noa update<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>W", ":noa update<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>4", ":lua require('replacer').run()<cr>", {silent = true})
@@ -90,11 +90,15 @@ vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<cr>', {noremap = 
 vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -2<cr>', {noremap = true, silent = true})
 
 
+
 -- TODO create entire treesitter section
 
 local mappings = {
-    a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+    -- a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+    a = {"<cmd>CocAction<cr>", "Code Action"},
     u = {"<cmd>UndotreeToggle<cr>", "Undo tree"},
+    i = {"<cmd>Neoformat<cr>", "Format code"},
+    m = {"<cmd>Telescope marks<cr>", "Show marks"},
 
     ["/"] = "Comment",
     ["c"] = {"<cmd>Telescope commands<cr>", "Command"},
@@ -123,7 +127,8 @@ local mappings = {
     b = {
         name = "+Buffers",
         p = {"<cmd>BufferPick<cr>", "Buffer Pick"},
-        o = {"<cmd>BufferCloseAllButCurrent<cr>", "Buffer Only"},
+        o = {"<cmd>Telescope buffers<cr>", "Buffer Only"},
+        c = {"<cmd>BufferClose<cr>", "Close current buffer"},
         D = {"<cmd>BufferOrderByDirectory<cr>", "sort BufferLines automatically by directory"},
         L = {"<cmd>BufferOrderByLanguage<cr>", "sort BufferLines automatically by language"}
     },

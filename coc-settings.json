@@ -1,0 +1,9 @@
+{
+  "solargraph.commandPath": "/usr/local/bin/solargraph",
+  "coc.source.dictionary.priority": 0,
+  "suggest.maxCompleteItemCount": 15,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "pyright.disableDiagnostics": true,
+  "diagnostic.enable": true
+}

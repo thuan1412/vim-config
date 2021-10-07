@@ -81,33 +81,37 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
-  ["compe-look"] = {
+  ["coc-fzf"] = {
     loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/compe-look"
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/coc-fzf"
   },
-  ["completion-buffers"] = {
+  ["coc-tailwind-intellisense"] = {
     loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/completion-buffers"
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/coc-tailwind-intellisense"
   },
-  ["completion-nvim"] = {
+  ["coc.nvim"] = {
     loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/coc.nvim"
+  },
+  ["deoplete.nvim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/deoplete.nvim"
   },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/diffview.nvim"
   },
-  ["doom-one.vim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/doom-one.vim"
-  },
   dracula = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/dracula"
   },
-  ["friendly-snippets"] = {
+  fzf = {
     loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
@@ -117,6 +121,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/git-blame.nvim"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
@@ -124,22 +132,6 @@ _G.packer_plugins = {
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
-  },
-  ["lsp-status.nvim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
-  },
-  ["lsp_signature.nvim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
-  },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
-  },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
   neoformat = {
     loaded = true,
@@ -149,6 +141,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/neogit"
   },
+  ["neosnippet-snippets"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/neosnippet-snippets"
+  },
+  ["neosnippet.vim"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/neosnippet.vim"
+  },
+  ["nvim-cheat.sh"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-cheat.sh"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
@@ -157,25 +161,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
-  ["nvim-compe"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-compe"
-  },
   ["nvim-dap"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-dap"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
-  },
-  ["nvim-lsputils"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-lsputils"
   },
   ["nvim-tree.lua"] = {
     loaded = false,
@@ -185,14 +173,6 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-treesitter-refactor"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
-  },
-  ["nvim-treesitter-textobjects"] = {
-    loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
@@ -230,13 +210,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["space-vim-dark"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/space-vim-dark"
+  },
   ["spelunker.vim"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/spelunker.vim"
   },
-  ["symbols-outline.nvim"] = {
+  ["telescope-fzf-native.nvim"] = {
     loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -250,9 +234,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-abolish"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-dadbod"
+  },
+  ["vim-dadbod-completion"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-dadbod-completion"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui"
+  },
   ["vim-easy-align"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-easy-align"
+  },
+  ["vim-monokai-pro"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-monokai-pro"
   },
   ["vim-prisma"] = {
     loaded = true,
@@ -261,6 +261,14 @@ _G.packer_plugins = {
   ["vim-repeat"] = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-repeat"
+  },
+  ["vim-signature"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-signature"
+  },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-snippets"
   },
   ["vim-speeddating"] = {
     loaded = true,
@@ -274,9 +282,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-unimpaired"
   },
-  ["vim-vsnip"] = {
+  ["vista.vim"] = {
     loaded = true,
-    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/home/thuando/.local/share/nvim/site/pack/packer/start/vista.vim"
   },
   ["which-key.nvim"] = {
     loaded = true,

@@ -10,4 +10,35 @@ function M.has_width_gt(cols)
   return vim.fn.winwidth(0) / 2 > cols
 end
 
+function M.define_augroups(definitions) -- {{{1
+	-- Create autocommand groups based on the passed definitions
+	--
+	-- The key will be the name of the group, and each definition
+	-- within the group should have:
+	--    1. Trigger
+	--    2. Pattern
+	--    3. Text
+	-- just like how they would normally be defined from Vim itself
+	for group_name, definition in pairs(definitions) do
+		vim.cmd("augroup " .. group_name)
+		vim.cmd("autocmd!")
+
+		for _, def in pairs(definition) do
+			local command = table.concat(vim.tbl_flatten({ "autocmd", def }), " ")
+			vim.cmd(command)
+		end
+
+		vim.cmd("augroup END")
+	end
+end
+
+M.packer_lazy_load = function(plugin, timer)
+   if plugin then
+      timer = timer or 0
+      vim.defer_fn(function()
+         require("packer").loader(plugin)
+      end, timer)
+   end
+end
+
 return M
